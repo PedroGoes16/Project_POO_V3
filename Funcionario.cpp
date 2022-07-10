@@ -6,6 +6,11 @@ using namespace std;
 Funcionario::Funcionario(){}
 
 void Funcionario::programarServico(ServicoCampo* _servico){
+    if(this->getCategoria() != _servico->getCategoriaPermitida()){
+        cout << "Deu ruim" << endl;
+        return;
+    }
+
     int contador_servicos = 0;
     for(ServicoCampo* servico : this->servicos){
         if(servico->getData().diffData(_servico->getData()) == 0){

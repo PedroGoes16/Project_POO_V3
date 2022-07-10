@@ -10,6 +10,7 @@ class ServicoCampo {
     Data data;
     int sequencia;
     Data data_execucao;
+    string categoria_permitida;
 
     public:
     ServicoCampo();
@@ -22,6 +23,8 @@ class ServicoCampo {
     Data getDataExecucao();
     void setSequencia(int);
     int getSequencia();
+    void setCategoriaPermitida(string);
+    string getCategoriaPermitida();
 
 };
 

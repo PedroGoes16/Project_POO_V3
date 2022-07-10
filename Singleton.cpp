@@ -1,11 +1,13 @@
 #include <iostream>
 #include "Singleton.h"
 
-Singleton* instancia_unica = nullptr;
+Usuario* Singleton::instancia_unica = 0;
 
-Singleton* Singleton::getInstance() {
-    if (instancia_unica == nullptr) {
-        instancia_unica = new Singleton();
+Singleton::Singleton(){}
+
+Usuario* Singleton::getInstance(Usuario* _usuario_logado) {
+    if (instancia_unica == 0) {
+        instancia_unica = _usuario_logado;
     }
     return instancia_unica;
 }

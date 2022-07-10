@@ -39,3 +39,11 @@ void ServicoCampo::setSequencia(int _sequencia){
 int ServicoCampo::getSequencia(){
     return this->sequencia;
 }
+
+void ServicoCampo::setCategoriaPermitida(string _categoria){
+    this->categoria_permitida = _categoria;
+}
+
+string ServicoCampo::getCategoriaPermitida(){
+    return this->categoria_permitida;
+}

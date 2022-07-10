@@ -5,12 +5,13 @@
 
 class Singleton {
     private: 
-    static Singleton* instancia_unica;
-    Singleton();
+    static Usuario* instancia_unica;
     ~Singleton();
+    Singleton();
 
     public:
-    static Singleton* getInstance();
+    static Usuario* getInstance(Usuario*);
+    
 };
 
 #endif

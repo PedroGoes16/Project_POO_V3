@@ -1,15 +1,16 @@
 #ifndef ELETRICISTA_H
 #define ELETRICISTA_H
 
-#include "Usuario.h"
+#include "Funcionario.h"
 
 using namespace std;
 
-class Eletricista : public Usuario {
+class Eletricista : public Funcionario {
     private:
 
 
     public:
+    Eletricista();
 
 
 };

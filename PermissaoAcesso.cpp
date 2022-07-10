@@ -3,10 +3,17 @@
 
 using namespace std;
 
-PermissaoAcesso::PermissaoAcesso(string _tipo){
-
-    if(_tipo == "cliente"){
-        
+PermissaoAcesso::PermissaoAcesso(Usuario* _single){
+    Usuario usuario_aux;
+    if(_single->getCategoria() == "Eletricista"){
+        this->acesso = "E1";
+    } else if (_single->getCategoria() == "Leiturista"){
+        this->acesso = "L1";
+    } else if (_single->getCategoria() == "Cliente"){
+        this->acesso = "C1";
     }
-    
+}
+
+string PermissaoAcesso::getAcesso(){
+    return this->acesso;
 }
