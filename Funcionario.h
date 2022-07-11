@@ -5,6 +5,8 @@
 #include <iostream>
 #include "Usuario.h"
 #include "ServicoCampo.h"
+#include "PermissaoAcesso.h"
+#include "PermissaoAcessoNegado.h"
 
 using namespace std;
 
@@ -16,7 +18,7 @@ class Funcionario : public Usuario {
 
     public:
     Funcionario();
-    void programarServico(ServicoCampo*);
+    void programarServico(ServicoCampo*, PermissaoAcesso);
     void desprogramarServico(ServicoCampo*);
     vector<ServicoCampo*> getServicos();
     void registrarExecucao(ServicoCampo*);

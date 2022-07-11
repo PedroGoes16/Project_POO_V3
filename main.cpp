@@ -16,6 +16,7 @@
 #include "ServicoCampo.h"
 #include "Usuario.h"
 #include "Singleton.h"
+#include "log.h"
 
 #include <iostream>
 #include <ctime>
@@ -55,11 +56,21 @@ int main(){
 
     Eletricista usuario_logado;
 
+    Usuario *s2 = Singleton::getInstance(&usuario_logado);
+
+    PermissaoAcesso permissao_acesso(s2);
+
     Data data;
 
     Medicao medicao1(&uc1, data, 2);
 
-    usuario_logado.programarServico(&medicao1);
+    Eletricista eletricista1;
+
+    Formato form("lala");
+
+    Data data2(form);
+
+    eletricista1.programarServico(&medicao1, permissao_acesso);
     
 
     /*cout << &usuario_logado << endl;

@@ -4,7 +4,7 @@
 using namespace std;
 
 PermissaoAcesso::PermissaoAcesso(Usuario* _single){
-    Usuario usuario_aux;
+    this->usuario = _single;
     if(_single->getCategoria() == "Eletricista"){
         this->acesso = "E1";
     } else if (_single->getCategoria() == "Leiturista"){

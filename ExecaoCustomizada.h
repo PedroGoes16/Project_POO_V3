@@ -10,14 +10,14 @@ using namespace std;
 class ExecaoCustomizada : public exception
 {
 protected:
-	char msg[100];
+	string msg;
 
 public:
-	ExecaoCustomizada(char* e)
+	ExecaoCustomizada(string e)
 	{
-		strcpy(msg, e);
+		this->msg = e;
 	}
-	virtual const char* what()
+	virtual const string what()
 	{
 		return msg;
 	}

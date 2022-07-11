@@ -10,6 +10,7 @@ class PermissaoAcesso {
 
     private:
     string acesso;
+    Usuario* usuario;
     
     public:
     PermissaoAcesso(Usuario*);

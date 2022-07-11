@@ -5,24 +5,32 @@ using namespace std;
 
 Funcionario::Funcionario(){}
 
-void Funcionario::programarServico(ServicoCampo* _servico){
-    if(this->getCategoria() != _servico->getCategoriaPermitida()){
-        cout << "Deu ruim" << endl;
-        return;
-    }
+void Funcionario::programarServico(ServicoCampo* _servico, PermissaoAcesso _permissao){
+    try{
+        if(_permissao.getAcesso() == "E1" || _permissao.getAcesso() == "L1"){
+            if(this->getCategoria() != _servico->getCategoriaPermitida()){
+                cout << "Servico nao cadastrado! Funcionario sem permissao para executar." << endl;
+                return;
+            }
 
-    int contador_servicos = 0;
-    for(ServicoCampo* servico : this->servicos){
-        if(servico->getData().diffData(_servico->getData()) == 0){
-            contador_servicos++;
-        }    
+            int contador_servicos = 0;
+            for(ServicoCampo* servico : this->servicos){
+                if(servico->getData().diffData(_servico->getData()) == 0){
+                    contador_servicos++;
+                }    
+            }
+            if(contador_servicos < 8){
+                this->servicos.push_back(_servico);
+            } else {
+                cout << "Trabalhador sobrecarregado nesta data! Servico não programado." << endl;
+            }
+        } else {
+            throw PermissaoAcessoNegado("Permissao de acesso negada!", __LINE__);
+        }
     }
-    if(contador_servicos < 8){
-        this->servicos.push_back(_servico);
-    } else {
-        cout << "Trabalhador sobrecarregado nesta data! Servico não programado." << endl;
+    catch(PermissaoAcessoNegado P){
+        P.Message();
     }
-    
 }
 
 void Funcionario::desprogramarServico(ServicoCampo* _servico){
