@@ -1,25 +1,25 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-      {
-        "label": "Compilar",
-        "type": "shell",
-        "command": "g++ Cliente.cpp Data.cpp Dados.cpp Eletricista.cpp Endereco.cpp Fatura.cpp Formato.cpp Funcionario.cpp Inadimplentes.cpp Leiturista.cpp LocalizacaoGeografica.cpp Medicao.cpp PermissaoAcesso.cpp ProcessamentoFatura.cpp ServicoCampo.cpp Singleton.cpp UnidadeConsumidora.cpp Usuario.cpp main.cpp -o teste",
-        "problemMatcher": [],
-        "group": {
-          "kind": "build",
-          "isDefault": true
-        }
-      },
-      {
-        "label": "Executar",
-        "type": "shell",
-        "command": "./teste",
-        "problemMatcher": [],
-        "group": {
-          "kind": "test",
-          "isDefault": true
-        }
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compilar",
+      "type": "shell",
+      "command": "g++ Cliente.cpp Dados.cpp Data.cpp Eletricista.cpp Endereco.cpp Fatura.cpp Formato.cpp Funcionario.cpp Inadimplentes.cpp Leiturista.cpp LocalizacaoGeografica.cpp Log.cpp LogLeitura.cpp Medicao.cpp PermissaoAcesso.cpp ProcessamentoFatura.cpp ServicoCampo.cpp Singleton.cpp UnidadeConsumidora.cpp Usuario.cpp main.cpp -o teste",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
       }
-    ]
-  }
+    },
+    {
+      "label": "Executar",
+      "type": "shell",
+      "command": "./teste",
+      "problemMatcher": [],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    }
+  ]
+}
