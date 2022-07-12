@@ -4,7 +4,7 @@
     {
       "label": "Compilar",
       "type": "shell",
-      "command": "g++ Cliente.cpp Dados.cpp Data.cpp Eletricista.cpp Endereco.cpp Fatura.cpp Formato.cpp Funcionario.cpp Inadimplentes.cpp Leiturista.cpp LocalizacaoGeografica.cpp Log.cpp LogLeitura.cpp Medicao.cpp PermissaoAcesso.cpp ProcessamentoFatura.cpp ServicoCampo.cpp Singleton.cpp UnidadeConsumidora.cpp Usuario.cpp main.cpp -o teste",
+      "command": "g++ Cliente.cpp Dados.cpp Data.cpp Eletricista.cpp Endereco.cpp Fatura.cpp Formato.cpp Funcionario.cpp Inadimplentes.cpp Leiturista.cpp LocalizacaoGeografica.cpp Log.cpp Medicao.cpp PermissaoAcesso.cpp ProcessamentoFatura.cpp ServicoCampo.cpp Singleton.cpp UnidadeConsumidora.cpp Usuario.cpp main.cpp -o teste",
       "problemMatcher": [],
       "group": {
         "kind": "build",
